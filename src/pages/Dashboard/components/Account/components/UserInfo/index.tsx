@@ -1,0 +1,33 @@
+import React from "react";
+import { Paper, Grid, Typography } from "@material-ui/core";
+import Avatar from "../Avatar";
+import useStyles from "../../styles";
+
+export default () => {
+  const classes = useStyles();
+  return (
+    <Paper className={classes.paper}>
+      <Avatar
+        classes={classes.avatar}
+        size="large"
+        src="data:image/jpeg;base64,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"
+      />
+      <Grid container direction="row" style={{ padding: 10 }}>
+        <Grid item xs={12}>
+          <Typography
+            style={{ margin: "auto", textAlign: "center" }}
+            variant="h6"
+          >
+            User Name
+          </Typography>
+        </Grid>
+        <Grid item xs={12}>
+          <Typography variant="subtitle2">Date of birth</Typography>
+        </Grid>
+        <Grid item xs={12}>
+          <Typography variant="subtitle2">Phone number</Typography>
+        </Grid>
+      </Grid>
+    </Paper>
+  );
+};
